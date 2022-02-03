@@ -32,8 +32,7 @@ app.use(
 
 const srv = server.listen(PORT, () => {
   const addr = server.address();
-  const binding =
-    typeof addr === "string" ? `pipe/socket ${addr}` : `port ${addr?.port}`;
+  const binding = srv.address().port;
   console.log(`Http server listening in ${binding}`);
 });
 
