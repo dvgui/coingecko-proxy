@@ -19,8 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(morgan("dev"));
 
-// Authorization - not working for
-//app.use(basicAuth);
+app.use(basicAuth);
 
 app.use(
   "/",
