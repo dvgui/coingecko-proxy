@@ -17,9 +17,9 @@ const server = createServer(app);
 
 app.use(express.urlencoded({ extended: true }));
 
-app.use(morgan("dev"));
-
 app.use(basicAuth);
+
+app.use(morgan("dev"));
 
 app.use(
   "/",
